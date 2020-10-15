@@ -257,7 +257,7 @@ export default {
         this.selectedAirlines = [];
       }
     },
-    onlyDirect() {
+     onlyRefundeble() {
       this.FILTER_FLIGHTS({
         airlines: this.selectedAirlines,
         option1: this.onlyDirect,
@@ -265,7 +265,7 @@ export default {
         option3: this.onlyWithBaggs
       });
     },
-    onlyRefundeble() {
+    onlyDirect() {
       this.FILTER_FLIGHTS({
         airlines: this.selectedAirlines,
         option1: this.onlyDirect,
