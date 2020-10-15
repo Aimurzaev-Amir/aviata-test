@@ -1,0 +1,257 @@
+@import "../../Variables.scss";
+
+.FlightTable {
+  .FlightBlock {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    @media (max-width: 1070px) {
+      grid-template-columns: 1fr auto;
+    }
+    .FlightInfo {
+      padding: 40px 0 18px 43px;
+      background: #ffffff;
+      @media (max-width: 1070px) {
+        padding: 10px;
+      }
+      .FlightMainInfo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 46px;
+        @media (max-width: 950px) {
+          display: block;
+          margin-bottom: 20px;
+        }
+        .FlightAirline {
+          color: #202123;
+          margin-right: 40px;
+          display: flex;
+          align-items: center;
+          width: 130px;
+          @media (max-width: 950px) {
+            margin-bottom: 20px;
+            margin-right: 0;
+          }
+          .FlightAirlineLogo {
+            margin-right: 12px;
+            max-height: 20px;
+          }
+          .FlightAirlineName {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 19px;
+          }
+        }
+        .FlightDate {
+          color: #202123;
+          margin-right: 28.5px;
+          @media (max-width: 950px) {
+            margin-right: 0;
+            &:nth-child(4) {
+              position: absolute;
+              top: 40px;
+              right: 5px;
+            }
+          }
+          .FlightDay {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 400;
+            .FlightDaySpan {
+              margin-left: 3px;
+              font-size: 10px;
+              color: #ff5f50;
+            }
+          }
+          .FlightTime {
+            font-size: 24px;
+            font-weight: 600;
+          }
+        }
+        .FlightRoute {
+          width: 172px;
+          margin-right: 28.5px;
+          @media (max-width: 950px) {
+            width: 95%;
+            margin-right: 0;
+          }
+          .FlightPlan {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .PlanAirportIATA {
+              font-size: 10px;
+              font-weight: 400;
+              color: #b9b9b9;
+            }
+            .FlightDuration {
+              color: #202123;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 18px;
+            }
+          }
+        }
+        .FlightMap {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          .FlightMapPoint {
+            width: 5px;
+            height: 5px;
+            border-radius: 100%;
+            border: 1px solid #b9b9b9;
+            background-color: #fff;
+            z-index: 9;
+          }
+          .FlightMapLine {
+            position: absolute;
+            width: 100%;
+            color: #b9b9b9;
+            height: 0.5px;
+            z-index: 8;
+            top: 2px;
+          }
+        }
+        .FlightTransferPlaceTime {
+          color: #ff9900;
+          font-size: 12px;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+      .FlightAdditionalInfo {
+        display: flex;
+        align-items: center;
+        @media (max-width: 760px) {
+          align-items: unset;
+          flex-direction: column;
+        }
+        .FlightAdditionalLink {
+          &:first-child {
+            margin-right: 23px;
+            @media (max-width: 760px) {
+              margin: 0 0 7px 0;
+            }
+          }
+          cursor: pointer;
+          color: #7284e4;
+          font-size: 12px;
+          font-weight: 400;
+          border-bottom: 1px dashed #7284e4;
+          margin-right: 46px;
+          @media (max-width: 760px) {
+            margin: 0 0 7px 0;
+          }
+        }
+        .RefundebleInfo {
+          display: flex;
+          align-items: center;
+          .RefundebleStatus {
+            margin-right: 7px;
+          }
+          .RefundebleStatusTitle {
+            font-family: "Arial", sans-serif;
+            color: #707276;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .BuyFlightInfo {
+      position: relative;
+      padding: 12px 20px 15px 20px;
+      background: #f5f5f5;
+      min-width: 165px;
+      @media (max-width: 400px) {
+        min-width: unset;
+        width: 115px;
+      }
+      @media (max-width: 330px) {
+        width: 100px;
+      }
+      .PriceInfo {
+        font-family: "Arial", sans-serif;
+        font-size: 26px;
+        font-weight: normal;
+        margin-bottom: 13px;
+        text-align: center;
+        @media (max-width: 790px) {
+          display: none;
+        }
+        .currency {
+          font-size: 19px;
+        }
+      }
+      .ChooseBtn {
+        background-color: $greenColor;
+        border-radius: 4px;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        cursor: pointer;
+        margin-bottom: 8px;
+        @media (max-width: 790px) {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          margin-bottom: 0;
+          width: 100%;
+        }
+      }
+      .quantityPriceInfo {
+        font-size: 12px;
+        text-align: center;
+        line-height: 16px;
+        color: #707276;
+        margin-bottom: 12px;
+        @media (max-width: 790px) {
+          position: absolute;
+          bottom: 70px;
+          left: 0;
+          width: 100%;
+          white-space: normal;
+          margin-bottom: 0;
+        }
+      }
+      .BaggageBlock {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        @media (max-width: 790px) {
+          flex-direction: column;
+        }
+        .baggageInfo {
+          min-width: 64.5px;
+          font-weight: 400;
+          text-align: center;
+          @media (max-width: 790px) {
+            margin-bottom: 7px;
+          }
+        }
+        .addBaggageBtn {
+          font-weight: 600;
+          color: #5763b3;
+          padding: 3px 8px;
+          background-color: #eaf0fa;
+          border-radius: 2px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.Message {
+  height: 100vh;
+}

@@ -1,0 +1,10 @@
+$greenColor: #55bb06;
+$bodyBGColor: #d7d7d7;
+
+%smallScreenPadding {
+    @media (max-width: 950px) {
+      padding-left: 25px!important;
+      padding-right: 25px!important;
+    }
+  }
+  
